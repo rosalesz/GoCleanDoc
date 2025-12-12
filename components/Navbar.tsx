@@ -30,7 +30,7 @@ export default function Navbar() {
                 <Database size={24} />
               </div>
               <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-slate-900 lg:text-white'}`}>
-                DataClean <span className="text-brand-600 font-light">Pro</span>
+                GoClean<span className="text-brand-600 font-light">Doc</span>
               </span>
             </a>
           </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
               href="#upload" 
               className="px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25"
             >
-              Diagnóstico Gratis
+              Analiza tu archivo gratis
             </a>
           </div>
 
@@ -83,7 +83,7 @@ export default function Navbar() {
               className="block w-full text-center mt-4 px-5 py-3 bg-brand-600 text-white font-semibold rounded-md"
               onClick={() => setIsOpen(false)}
             >
-              Solicitar Diagnóstico
+              Analiza tu archivo gratis
             </a>
           </div>
         </div>

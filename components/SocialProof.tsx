@@ -10,34 +10,34 @@ export default function SocialProof() {
 
   const cases = [
     {
-      title: "E-Commerce con Múltiples Fuentes",
-      before: ["3 archivos diferentes", "2,400 duplicados", "Fechas inconsistentes"],
-      after: ["1 dataset unificado", "0 duplicados", "Datos 100% completos"],
-      result: "Identificaron que el 35% de sus ventas venían de un canal que no sabían que era rentable."
+      title: "Caso 1: Empresa de E-commerce",
+      before: ["150,000 registros de clientes", "Duplicados y fechas mixtas", "Reportes imprecisos"],
+      after: ["Dataset de 127,000 únicos", "Estandarización completa", "Validación de emails"],
+      result: "Reducción de 40% en tiempo de análisis mensual."
     },
     {
-      title: "Empresa de Servicios (Datos Heredados)",
-      before: ["DB antigua (8 años)", "Clientes duplicados", "Contactos inconsistentes"],
-      after: ["Base limpia consolidada", "Clientes únicos", "Segmentación funcional"],
-      result: "Redujeron costos de marketing en 40% al dirigirse a los clientes correctos."
+      title: "Caso 2: Empresa de Recursos Humanos",
+      before: ["Datos en 3 Excels diferentes", "Nombres inconsistentes", "Monedas mezcladas"],
+      after: ["Base de datos única", "Diccionario de datos creado", "Auditoría mejorada"],
+      result: "Dashboards de RRHH precisos y confiables."
     },
     {
-      title: "Startup preparándose para IA",
-      before: ["5 CSVs inconsistentes", "Valores nulos", "No apto para ML"],
-      after: ["Dataset optimizado ML", "Documentación técnica", "Métricas de calidad"],
-      result: "Lanzaron su modelo de IA 3 semanas antes de lo planeado."
+      title: "Caso 3: Startup de IA",
+      before: ["500,000 registros crudos", "Variables sin codificar", "Outliers no identificados"],
+      after: ["Normalización avanzada", "Balanceo de clases", "Documentación técnica"],
+      result: "Modelo entrenó 40% más rápido con 15% mejor precisión."
     }
   ];
 
   const faqs = [
-    { q: "¿Cuánto tiempo tarda la limpieza de datos?", a: "Depende de la complejidad. Pequeños: 3-5 días. Medianos: 5-7 días. Complejos: 7-10 días." },
-    { q: "¿Qué formatos de archivo aceptan?", a: "Excel (.xlsx, .xls), CSV, TXT, JSON, y bases de datos pequeñas (SQLite, Access)." },
-    { q: "¿Hay límite de tamaño de archivo?", a: "Idealmente hasta 500MB. Si es más grande, podemos dividir el trabajo." },
-    { q: "¿Qué pasa si no me gusta el resultado?", a: "Incluimos revisiones. Si tras los ajustes no estás satisfecho, discutimos opciones." },
-    { q: "¿Mis datos están seguros?", a: "Sí. Encriptación, servidores seguros y acuerdos de confidencialidad. No compartimos con terceros." },
-    { q: "¿Necesito conocimientos técnicos?", a: "No. Entregamos datos listos para usar con documentación clara." },
-    { q: "¿Puedo hacer cambios después?", a: "Sí. Planes superiores incluyen soporte post-entrega (hasta 14 días)." },
-    { q: "¿Ofrecen servicio recurrente?", a: "Sí, podemos crear un plan mensual personalizado." }
+    { q: "¿Qué formatos de archivo aceptan?", a: "Excel (.xlsx, .xls), CSV, TXT, JSON, bases de datos pequeñas (.db, .accdb) y URLs de repositorios (GitHub, GitLab, Kaggle, Google Drive, Dropbox)." },
+    { q: "¿Cuál es el tamaño máximo de archivo?", a: "Recomendamos hasta 500MB. Archivos más grandes requieren consulta previa." },
+    { q: "¿Cuánto tiempo tarda?", a: "Depende del plan: Básico (2-3 días), Integra (3-5 días), IA-Ready (5-7 días hábiles)." },
+    { q: "¿Qué pasa con mis datos? ¿Son confidenciales?", a: "Sí. Todos los datos se procesan bajo estricta confidencialidad. Usamos servidores seguros y eliminamos archivos después de entrega." },
+    { q: "¿Puedo subir datos desde una URL?", a: "Sí. Aceptamos URLs de GitHub, GitLab, Kaggle, Google Drive, Dropbox y otros repositorios. El sistema descarga y procesa automáticamente." },
+    { q: "¿Incluye soporte después de la entrega?", a: "Sí. Respondemos preguntas sobre el dataset entregado y realizamos ajustes menores si es necesario." },
+    { q: "¿Puedo usar los datos para IA/Machine Learning?", a: "Sí. El plan IA-Ready está específicamente diseñado para esto. Incluye normalización, codificación de variables y preparación técnica completa." },
+    { q: "¿Qué sucede si encuentran problemas graves en mis datos?", a: "Te lo comunicamos inmediatamente. Incluimos un diagnóstico detallado y recomendaciones antes de proceder." }
   ];
 
   return (
@@ -46,12 +46,12 @@ export default function SocialProof() {
       <section id="casos" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900">Transformaciones reales de datos</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Resultados reales de nuestros clientes</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {cases.map((c, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+              <div key={idx} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                 <div className="p-6 border-b border-slate-100 bg-slate-50">
                   <h3 className="font-bold text-slate-900">{c.title}</h3>
                 </div>
@@ -83,11 +83,11 @@ export default function SocialProof() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="grid md:grid-cols-3 gap-8">
              {[
-               { quote: "DataClean Pro nos entregó un dataset limpio en una semana. Ahora nuestros dashboards funcionan perfectamente.", author: "María García", role: "Gerente Operaciones, TechVentures Latam" },
-               { quote: "El equipo fue muy profesional, nos explicó todo claramente. El precio fue justo y el trabajo rápido.", author: "Carlos Mendoza", role: "Fundador, E-Commerce Solutions" },
-               { quote: "No solo limpiaron los datos, sino que nos asesoraron sobre cómo estructurarlos mejor para IA.", author: "Sofía Rodríguez", role: "Data Analyst, Innovatech Consulting" }
+               { quote: "Teníamos datos de clientes esparcidos en 5 archivos diferentes. GoCleanDoc los consolidó, limpió y documentó en una semana. Ahora nuestros reportes son confiables y nuestro equipo ahorra 20 horas mensuales.", author: "María González", role: "Directora de Datos, TechVentas" },
+               { quote: "Intentamos limpiar nuestros datos internamente. Gastamos 3 meses y aún había inconsistencias. GoCleanDoc lo hizo bien en 5 días. La documentación que incluyen es invaluable.", author: "Carlos Rodríguez", role: "CEO, Logística Plus" },
+               { quote: "Necesitábamos preparar datos para un modelo de machine learning. GoCleanDoc no solo limpió, sino que preparó específicamente para IA. El modelo entrenó 40% más rápido.", author: "Laura Martínez", role: "Data Scientist, InnovaAI" }
              ].map((t, i) => (
-               <div key={i} className="bg-slate-800 p-8 rounded-xl relative">
+               <div key={i} className="bg-slate-800 p-8 rounded-xl relative hover:bg-slate-750 transition-colors">
                  <Quote className="text-brand-500 absolute top-6 left-6 opacity-30" size={40} />
                  <p className="text-slate-300 relative z-10 mb-6 italic">"{t.quote}"</p>
                  <div>

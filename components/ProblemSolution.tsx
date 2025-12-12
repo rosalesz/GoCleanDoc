@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle, Clock, Users, ShieldCheck, Zap, UserCheck } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, Database, FileCheck, ShieldCheck, Zap } from 'lucide-react';
 
 export default function ProblemSolution() {
   return (
@@ -9,57 +9,49 @@ export default function ProblemSolution() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              El 80% de las empresas pierden oportunidades por datos desordenados
+              ¿Tus datos son un desastre?
             </h2>
+            <p className="text-lg text-slate-600">
+              La mayoría de empresas tienen datos valiosos atrapados en archivos desorganizados: duplicados, inconsistencias, formatos mixtos, valores faltantes.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
+            <div className="bg-red-50 p-8 rounded-2xl border border-red-100 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <AlertTriangle className="text-red-500" />
-                La Realidad Actual
+                Esto afecta tu rentabilidad
               </h3>
-              <p className="text-slate-600 mb-4">
-                Tus datos están en múltiples archivos. Duplicados. Incompletos. Con formatos inconsistentes. Errores que nadie detectó.
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-slate-700">
-                  <span className="text-red-500 font-bold">×</span> No puedes hacer análisis confiables.
+                  <span className="text-red-500 font-bold mt-1">×</span> 
+                  <span><strong>Reportes que llegan tarde:</strong> Tiempo perdido en limpieza manual.</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700">
-                  <span className="text-red-500 font-bold">×</span> Los dashboards muestran información incorrecta.
+                  <span className="text-red-500 font-bold mt-1">×</span> 
+                  <span><strong>Dashboards incorrectos:</strong> Decisiones basadas en información incompleta.</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700">
-                  <span className="text-red-500 font-bold">×</span> Los modelos de IA fallan.
+                  <span className="text-red-500 font-bold mt-1">×</span> 
+                  <span><strong>Proyectos de IA fallidos:</strong> Modelos que fracasan por mala data.</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700">
-                  <span className="text-red-500 font-bold">×</span> Los reportes generan decisiones equivocadas.
+                  <span className="text-red-500 font-bold mt-1">×</span> 
+                  <span><strong>Ineficiencia operativa:</strong> Equipos gastando horas en tareas repetitivas.</span>
                 </li>
               </ul>
             </div>
             
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Mientras tanto, tu competencia ya está usando datos limpios para:
+            <div className="pl-0 md:pl-10">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                GoCleanDoc resuelve esto en días, no semanas.
               </h3>
-              <ul className="space-y-4">
-                {[
-                  "Identificar oportunidades que tú no ves",
-                  "Automatizar decisiones con IA",
-                  "Generar reportes que realmente importan",
-                  "Ahorrar horas de trabajo manual"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-green-100 text-green-600">
-                      <CheckCircle size={16} />
-                    </div>
-                    <span className="text-slate-700 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 p-4 bg-blue-50 border-l-4 border-brand-500 rounded-r-lg">
-                <p className="text-brand-800 font-medium">
-                  El problema no es que no tengas datos. Es que no están listos para usarlos.
+              <p className="text-slate-600 mb-6">
+                El resultado es tiempo perdido en limpieza manual, análisis imprecisos y decisiones basadas en información incompleta.
+              </p>
+              <div className="p-6 bg-slate-50 border-l-4 border-brand-500 rounded-r-lg">
+                <p className="text-brand-800 font-medium italic">
+                  "No puedes construir un negocio inteligente sobre datos sucios."
                 </p>
               </div>
             </div>
@@ -71,72 +63,79 @@ export default function ProblemSolution() {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-brand-400 font-semibold tracking-wider uppercase text-sm">La Solución</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">DataClean Pro: Tu equipo de datos especializado</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">Tu equipo externo de datos</h2>
           <p className="text-slate-400 text-lg max-w-3xl mx-auto mb-12">
-            No es un software. No es una herramienta que tengas que aprender. Es un servicio.
+            GoCleanDoc es el servicio que toman empresas cuando necesitan datos listos para trabajar. No somos software genérico. Somos especialistas que entienden tus datos.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 backdrop-blur-sm">
-              <div className="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-brand-400">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 backdrop-blur-sm hover:border-brand-500/50 transition-colors">
+              <div className="w-14 h-14 bg-brand-900/50 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-400">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
               </div>
-              <h4 className="text-xl font-semibold mb-2">Envías</h4>
-              <p className="text-slate-400">Tus archivos desordenados sin importar el formato.</p>
+              <h4 className="text-xl font-bold mb-3">1. Subes</h4>
+              <p className="text-slate-400 leading-relaxed">Subes tu archivo o URL. Aceptamos Excel, CSV, JSON, bases de datos y repositorios online.</p>
             </div>
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 backdrop-blur-sm relative">
-              <div className="absolute top-1/2 -left-4 hidden md:block text-slate-600">→</div>
-              <div className="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-brand-400">
-                <Zap size={24} />
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 backdrop-blur-sm hover:border-brand-500/50 transition-colors relative">
+              <div className="w-14 h-14 bg-brand-900/50 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-400">
+                <Zap size={32} />
               </div>
-              <h4 className="text-xl font-semibold mb-2">Procesamos</h4>
-              <p className="text-slate-400">Nuestro equipo experto limpia, organiza y valida.</p>
+              <h4 className="text-xl font-bold mb-3">2. Procesamos</h4>
+              <p className="text-slate-400 leading-relaxed">Nuestro sistema analiza, diagnostica y prepara. Limpiamos, organizamos y documentamos completamente.</p>
             </div>
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 backdrop-blur-sm relative">
-              <div className="absolute top-1/2 -left-4 hidden md:block text-slate-600">→</div>
-              <div className="w-12 h-12 bg-brand-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-brand-400">
-                <CheckCircle size={24} />
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 backdrop-blur-sm hover:border-brand-500/50 transition-colors relative">
+              <div className="w-14 h-14 bg-brand-900/50 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-400">
+                <CheckCircle size={32} />
               </div>
-              <h4 className="text-xl font-semibold mb-2">Recibes</h4>
-              <p className="text-slate-400">Un dataset profesional listo para análisis o IA.</p>
+              <h4 className="text-xl font-bold mb-3">3. Recibes</h4>
+              <p className="text-slate-400 leading-relaxed">Un dataset profesional, validado y listo para análisis, reportes o inteligencia artificial.</p>
             </div>
           </div>
 
-          <p className="text-xl font-medium text-white">
-            Nosotros hacemos el trabajo técnico. Tú obtienes datos confiables.<br />
-            <span className="text-brand-400 text-lg">Sin complicaciones. Sin sorpresas. Sin curva de aprendizaje.</span>
-          </p>
+          <div className="inline-block px-6 py-2 border border-brand-500/30 rounded-full bg-brand-900/20 text-brand-300 font-medium">
+            Profesional. Rápido. Confiable.
+          </div>
         </div>
       </section>
 
-      {/* SECCIÓN 7: DIFERENCIALES (Why Choose Us) */}
+      {/* SECCIÓN 7: DIFERENCIALES */}
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900">Lo que nos diferencia</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Por qué elegir GoCleanDoc</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
              {[
                {
-                 icon: <Clock className="text-brand-600" size={24} />,
-                 title: "Rapidez",
-                 desc: "Resultados en días, no semanas. Nuestro equipo trabaja enfocado exclusivamente en tu proyecto."
+                 icon: <Database className="text-brand-600" size={24} />,
+                 title: "Especialistas en datos",
+                 desc: "Nuestro equipo entiende limpieza de datos a nivel profesional, no es automatización ciega."
                },
                {
-                 icon: <Users className="text-brand-600" size={24} />,
-                 title: "Asesoría Humana",
-                 desc: "Hablas con expertos, no con chatbots. Te explicamos qué encontramos y por qué lo limpiamos así."
+                 icon: <FileCheck className="text-brand-600" size={24} />,
+                 title: "Documentación completa",
+                 desc: "Sabes exactamente qué cambió, por qué y cómo usar tus datos. Diccionarios de datos incluidos."
+               },
+               {
+                 icon: <Zap className="text-brand-600" size={24} />,
+                 title: "Soporte múltiples formatos",
+                 desc: "Excel, CSV, JSON, bases de datos, URLs de repositorios online. Todo en un lugar."
                },
                {
                  icon: <ShieldCheck className="text-brand-600" size={24} />,
-                 title: "Profesional",
-                 desc: "Equipo experto en datos. Procesos documentados. Garantía de calidad en cada entrega."
+                 title: "Validación exhaustiva",
+                 desc: "Cada dataset se prueba contra reglas de calidad específicas de tu industria antes de entregar."
                },
                {
-                 icon: <UserCheck className="text-brand-600" size={24} />,
-                 title: "Ideal PyMEs",
-                 desc: "No necesitas contratar a un especialista en datos. Nosotros somos tu equipo de datos externo."
+                 icon: <CheckCircle className="text-brand-600" size={24} />,
+                 title: "Preparación para IA",
+                 desc: "Si necesitas datos para machine learning, los preparamos correctamente desde el inicio."
+               },
+               {
+                 icon: <Clock className="text-brand-600" size={24} />,
+                 title: "Entrega rápida",
+                 desc: "De 2 a 7 días según el plan. Sin semanas de espera ni sorpresas."
                }
              ].map((item, idx) => (
                <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
